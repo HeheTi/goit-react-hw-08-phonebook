@@ -1,0 +1,16 @@
+.app {
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.errorMess {
+  color: red;
+}
+
+.mainNav {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

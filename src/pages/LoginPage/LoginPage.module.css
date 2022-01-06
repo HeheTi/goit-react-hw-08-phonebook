@@ -1,0 +1,12 @@
+.btnSingup {
+  margin-top: 10px;
+  display: block;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btnSingup:hover,
+.btnSingup:focus {
+  background-color: blueviolet;
+  color: white;
+}
