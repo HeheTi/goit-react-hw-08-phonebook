@@ -2,10 +2,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteContact } from '../../../redux/contacts/contactsOperations';
 import { normalizeName } from '../../../services/normalize';
+import { authSelectors } from '../../../redux/auth';
+
 import s from './ItemContact.module.css';
 
 const ItemContact = ({ name, number, id }) => {
-  const token = useSelector(state => state.auth.token);
+  const token = useSelector(authSelectors.getToken);
   const dispatch = useDispatch();
 
   return (

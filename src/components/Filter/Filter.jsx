@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Input from '../../common/Input';
 import { contactsActions } from '../../redux/contacts';
 import { contactsSelectors } from '../../redux/contacts';
+import s from './Filter.module.css';
 
 function Filter({ filter, onChangeFilter }) {
   const onChangeFilterValue = useCallback(
@@ -15,13 +16,15 @@ function Filter({ filter, onChangeFilter }) {
   );
 
   return (
-    <Input
-      label="Find contacts by name"
-      type="text"
-      onChange={onChangeFilterValue}
-      name="filter"
-      value={filter}
-    />
+    <div className={s.wrapperFilter}>
+      <Input
+        label="Find contacts by name"
+        type="text"
+        onChange={onChangeFilterValue}
+        name="filter"
+        value={filter}
+      />
+    </div>
   );
 }
 

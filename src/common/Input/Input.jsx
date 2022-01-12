@@ -1,23 +1,21 @@
-import { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
+import TextField from '@mui/material/TextField';
 
-import s from './Input.module.css';
-
-const Input = ({ label, ...arg }) => {
-  const { current: id } = useRef(nanoid());
+const Input = ({ ...arg }) => {
   return (
-    <div className={s.wrapperInput}>
-      <label className={s.labelTitle} htmlFor={id}>
-        {label}:
-      </label>
-      <input className={s.input} id={id} {...arg} />
-    </div>
+    <TextField
+      {...arg}
+      id="outlined-basic"
+      variant="outlined"
+      color="secondary"
+      sx={{
+        width: 400,
+      }}
+    />
   );
 };
 
 Input.propTypes = {
-  label: PropTypes.string,
   arg: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

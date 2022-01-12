@@ -46,8 +46,3 @@ const authSlice = createSlice({
 });
 
 export default authSlice.reducer;
-
-/**{
-    [authOperations.register.fulfilled](state, action) {
-    },
-  }, */
